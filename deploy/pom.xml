@@ -9,5 +9,32 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <url>
+                http://localhost:8081/nexus/content/repositories/releases
+            </url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>
+                http://localhost:8081/nexus/content/repositories/snapshots
+            </url>
+        </snapshotRepository>
+    </distributionManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
 
+            </plugin>
+        </plugins>
+    </build>
+    <scm>
+        <developerConnection>
+            scm:git:https://github.com/mgouri/Experiment.git
+        </developerConnection>
+    </scm>
 </project>
